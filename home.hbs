@@ -18,26 +18,36 @@
         </div>
     </section>
     <section>
-              <figure class="kg-card kg-image-card kg-width-full"><img src="https://testblog.gymstreak.com/content/images/2023/08/64b96156b94d249358fd3577_home-1-.png" class="kg-image" alt="" loading="lazy" width="2000" height="1069" srcset="https://testblog.gymstreak.com/content/images/size/w600/2023/08/64b96156b94d249358fd3577_home-1-.png 600w, https://testblog.gymstreak.com/content/images/size/w1000/2023/08/64b96156b94d249358fd3577_home-1-.png 1000w, https://testblog.gymstreak.com/content/images/size/w1600/2023/08/64b96156b94d249358fd3577_home-1-.png 1600w, https://testblog.gymstreak.com/content/images/size/w2400/2023/08/64b96156b94d249358fd3577_home-1-.png 2400w"></figure>
+            <figure class="kg-card kg-image-card kg-width-full"><img src="https://testblog.gymstreak.com/content/images/2023/08/64b96156b94d249358fd3577_home-1-.png" class="kg-image" alt="" loading="lazy" width="2000" height="1069" srcset="https://testblog.gymstreak.com/content/images/size/w600/2023/08/64b96156b94d249358fd3577_home-1-.png 600w, https://testblog.gymstreak.com/content/images/size/w1000/2023/08/64b96156b94d249358fd3577_home-1-.png 1000w, https://testblog.gymstreak.com/content/images/size/w1600/2023/08/64b96156b94d249358fd3577_home-1-.png 1600w, https://testblog.gymstreak.com/content/images/size/w2400/2023/08/64b96156b94d249358fd3577_home-1-.png 2400w"></figure>
             
             <div class="gradient full-hero-image---left"></div>
             <div class="gradient full-hero-image---right"></div>
             <div class="gradient full-hero-image"></div>
     </section>
-    <section class="p-outer">
-        <div class="p-inner">
-            <h2>Latest Articles</h2>
-            <div class="p-posts-grid">
-                {{! Use the foreach helper to loop through available posts }}
-                {{#foreach posts}}
-                <article class="p-post-card">
-                    {{! Use the img_url helper to bring in the post's feature image. }}
-                    <img src="{{img_url feature_image size="m"}}" alt="{{feature_image_alt}}" />
-                    <h3><a href="{{url}}">{{title}}</a></h3>
-                </article>
-                {{/foreach}}
-            </div>
-        </div>
+    <section>
+    {{#if @custom.show_recent_posts_footer}}
+    {{!-- The {#get} helper below fetches some of the latest posts here
+    so that people have something else to read when they finish this one.
+
+    This query gets the latest 3 posts on the site, but adds a filter to
+    exclude the post we're currently on from being included. --}}
+    {{#get "posts" limit="3" as |more_posts|}}
+
+        {{#if more_posts}}
+            <aside class="read-more-wrap outer">
+                <div class="read-more inner">
+                    {{#foreach more_posts}}
+                        {{> "post-card"}}
+                    {{/foreach}}
+                </div>
+            </aside>
+        {{/if}}
+
+        {{/get}}
+    {{/if}}
     </section>
+       
 </main>
+
+
 
