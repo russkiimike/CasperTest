@@ -1,6 +1,6 @@
 {{!< default}}
 
-<main id="main" class="site-main">
+<main id="main">
     <section class="p-outer">
         <div class="p-inner p-hero">
             <div class="p-hero-left">
@@ -24,7 +24,13 @@
             <div class="gradient full-hero-image---right"></div>
             <div class="gradient full-hero-image"></div>
     </section>
-    <section>
+    <section class="footer-cta outer">
+        <div class="inner">
+           <h2 class="footer-cta-title">Latest Articles</h2>
+        </div>
+    
+            
+
     {{#if @custom.show_recent_posts_footer}}
     {{!-- The {#get} helper below fetches some of the latest posts here
     so that people have something else to read when they finish this one.
@@ -45,8 +51,11 @@
 
         {{/get}}
     {{/if}}
+
+        <div class="kg-card kg-button-card kg-align-center"><a href="https://testblog.gymstreak.com/" class="kg-btn kg-btn-accent">Download ios</a></div>
+
+    
     </section>
-       
 </main>
 
 
