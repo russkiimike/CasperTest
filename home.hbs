@@ -2,30 +2,67 @@
 <div class="site-header-content outer{{#match @custom.header_style "Left aligned"}} left-aligned{{/match}}{{#unless @custom.show_publication_cover}}{{#match @custom.header_style "Hidden"}} no-content{{/match}}{{/unless}}" style="background-color:rgb(92, 99, 185)">
     <div class="site-header-inner inner">
             
-            <p class="site-description">The all-in-one gym workout app</p>
-            <p class="site-subdescription">Track your workouts and nutrition all in one place.</p>
-            <div class="button-container">
-                <button class="custom-button">Download for iOS</button>
-                <button class="custom-button">Download for Android</button>
-</div>
+       style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 400px;
+"
+            
+    <img src="https://gymstreak.com/img/stage_left.png"  alt="Image 1" style="max-width: 350px;position: absolute;margin-left: -25%;margin-top: 100px;z-index: 1;rotate: -3deg;">
+    <img src="https://gymstreak.com/img/center_stage.png" alt="Image 2" style="max-width: 400px;position: absolute;/* margin-left: 50px; */z-index: 100;rotate: -3deg;margin-top: 50px;">
+    <img src="https://gymstreak.com/img/stage_right.png" alt="Image 3" style="max-width: 350px;position: absolute;margin-left: 25%;margin-top: 100px;z-index: 1;rotate: -3deg;">  
+    
     </div>
+
+
+
+
+    
 </div>
 
 <main id="main">
  <section>
-      <div class="site-header-inner inner">
+     <div style="
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5% 0px;
+">
             
             <p class="site-description">Workout Smarter</p>
             <p class="site-subdescription">Automatically created <b style="font-weight:bold">intelligent</b> workout plan based on your body type, goals and experience.</p>
             <p class="site-subdescription">Track your workouts, and nutrition all in one place.</p>
+ </div>
+
+            
  </section>  
 <section>
+    <div class="row justify-content-center" style="text-align:center; margin-top:50px;color:#fff; ">
+  <div style="vertical-align:middle; ">
+   <a href="https://apps.apple.com/app/apple-store/id1371187280?pt=119015917&amp;ct=Website&amp;mt=8" target="_blank">
+     <img src="img/appstore.png" style="max-width: 400px; margin-top:5px; margin-bottom:25px;">
+     </a>
+
+ <a href="https://play.google.com/store/apps/details?id=com.gymstreak.GymStreakAI" target="_blank">
+   <img src="img/playstore.png" style="max-width: 400px;margin-top:5px; margin-bottom:25px;">
+   </a>
+</div>
+
+
+
+</div>
+</section>
+
+<section>
+
+    
       <!---  <figure class="kg-card kg-image-card kg-width-full"><img src="https://testblog.gymstreak.com/content/images/2023/08/grey_home.png" class="kg-image" alt="" loading="lazy" width="2000" height="1069" srcset="https://testblog.gymstreak.com/content/images/size/w600/2023/08/64b96156b94d249358fd3577_home-1-.png 600w, https://testblog.gymstreak.com/content/images/size/w1000/2023/08/64b96156b94d249358fd3577_home-1-.png 1000w, https://testblog.gymstreak.com/content/images/size/w1600/2023/08/64b96156b94d249358fd3577_home-1-.png 1600w, https://testblog.gymstreak.com/content/images/size/w2400/2023/08/64b96156b94d249358fd3577_home-1-.png 2400w"></figure>
-      -->  <div style="position:relative;display:grid;overflow:hidden">
+      -->  <div style="position:relative;display:grid;overflow:hidden;justify-items: center;">
             <img class="img" src="https://gymstreak.com/img/phone_frame.png" style="width:450px;z-index:100;">
-            <!---
-            <div id = "workout-screen" style='position:absolute;'><img class="img" src="img/new_workout.png" style="width:450px; position:absolute;z-index:10;margin-left : 0px;" ></img></div>
-            -->
             <img id="workout-plan-screen" class="img" src="https://gymstreak.com/img/new_workout.png" style="width: 450px; position: absolute; z-index: 1; padding: 20px">
           </div>
         <div class="gradient full-hero-image---left"></div>
@@ -51,7 +88,9 @@
             <aside class="read-more-wrap outer">
                 <div class="read-more inner">
                     {{#foreach more_posts}}
+                     {{^has tag="appworkouts,appmealplans"}}
                         {{> "post-card"}}
+                     {{/has}}
                     {{/foreach}}
                 </div>
             </aside>
