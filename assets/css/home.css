@@ -1,52 +1,26 @@
 /* These styles override the Casper navbar defaults */
 
-  .gradient {
-    min-height: 350px;
-    background-image: linear-gradient(rgba(6, 6, 6, 0), #060606);
-    position: absolute;
-    top: auto;
-    bottom: 0%;
-    left: 0%;
-    right: 0%;
-  }
-  
-  .gradient.full-hero-image {
-    min-height: 64%;
-    background-image: linear-gradient(rgba(6, 6, 6, 0), #060606);
-  }
-  
-  .gradient.full-hero-image---left {
-    width: 10%;
-    min-height: auto;
-    background-image: linear-gradient(270deg, rgba(6, 6, 6, 0), #060606);
-    margin-left: -5px;
-    display: none;
-    top: 0%;
-    bottom: 0%;
-    left: 0%;
-    right: auto;
-  }
-  
-  .gradient.full-hero-image---right {
-    width: 10%;
-    min-height: auto;
-    background-image: linear-gradient(to right, rgba(6, 6, 6, 0), #060606);
-    margin-right: -5px;
-    display: none;
-    top: 0%;
-    bottom: 0%;
-    left: auto;
-    right: 0%;
-  }
-  
-  .site-description {
+ 
+.phoneimage {
     display: inline-block;
-    z-index: 10;
-    max-width: 760px;
-    font-size: 6rem;
-    font-weight: 700;
-    line-height: 1.1;
- }
+    background: -moz-linear-gradient(bottom, rgba(0,0,0,0) 50%, rgb(21, 23, 25) 90%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(21, 23, 25) 90%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(21, 23, 25) 90%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(21, 23, 25) 90%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgb(21, 23, 25) 90%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=0); /* IE6-9 */
+  }
+  
+  
+.site-description {
+  display: inline-block;
+  z-index: 10;
+  max-width: 760px;
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
 
 .site-subdescription {
 color: var(--color-secondary-text);

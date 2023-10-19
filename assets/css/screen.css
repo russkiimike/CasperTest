@@ -2539,46 +2539,4 @@ the right place. Onward!
  */
 
 
- .button-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.custom-button {
-    margin: 10px;
-    padding: 10px 20px;
-    border: none;
-    background-color: #fff;
-    color: black;
-    cursor: pointer;
-    border-radius: 10px;
-}
-
-.custom-button:hover {
-    background-color: #4487d7;
-}
-
-/* Media query for screens with width less than or equal to 768px (common breakpoint for mobile devices) */
-@media (max-width: 768px) {
-    .button-container {
-        flex-direction: column;
-    }
-    .custom-button {
-        width: 100%;
-        margin: 5px 0;
-    }
-}
-
-
-.phoneimage {
-    display: inline-block;
-    background: -moz-linear-gradient(bottom, rgba(0,0,0,0) 50%, rgb(21, 23, 25) 90%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(21, 23, 25) 90%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(21, 23, 25) 90%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(21, 23, 25) 90%); /* IE10+ */
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgb(21, 23, 25) 90%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=0); /* IE6-9 */
-  }
-  
+/* 12. Custom Styles */
